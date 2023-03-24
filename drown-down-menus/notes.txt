@@ -1,0 +1,1 @@
+- can only generate 4 tabs and 4 items until css and javascript can use the same amount (using .env?)
