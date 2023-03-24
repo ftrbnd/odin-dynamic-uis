@@ -17,9 +17,14 @@ html, body {
 }
 
 .nav {
+    position: fixed;
+    top: 0;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: none;
+
+    width: 100%;
 }
 
 .tab {
@@ -45,6 +50,8 @@ html, body {
 
 .menu-container {
     position: fixed;
+    margin: 100px auto 0;
+    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
