@@ -1,3 +1,11 @@
+:root {
+    --tab-color: gray;
+    --tab-text-color: white;
+
+    --tab-color-hover: lightgray;
+    --tab-text-color-hover: black;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -9,18 +17,18 @@ html, body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-
-    color: white;
-    background-color: gray;
 }
 
 .tab {
+    color: var(--tab-text-color);
+    background-color: var(--tab-color);
     text-align: center;
 }
 
 .tab:hover {
-    color: black;
-    background-color: lightgray;
+    cursor: pointer;
+    color: var(--tab-text-color-hover);
+    background-color: var(--tab-color-hover);
 }
 
 .menu {
