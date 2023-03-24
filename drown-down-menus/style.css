@@ -4,6 +4,9 @@
 
     --tab-color-hover: lightgray;
     --tab-text-color-hover: black;
+    
+    --menu-color: rgb(65, 65, 65);
+    --menu-text-color: white;
 }
 
 html, body {
@@ -16,22 +19,66 @@ html, body {
 .nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
+    grid-template-rows: none;
 }
 
 .tab {
+    grid-row: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: var(--tab-text-color);
     background-color: var(--tab-color);
     text-align: center;
+    height: 100px;
 }
 
 .tab:hover {
     cursor: pointer;
     color: var(--tab-text-color-hover);
     background-color: var(--tab-color-hover);
+
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 
 .menu {
+    grid-row: 2;
+    grid-column: 4;
+    justify-self: stretch;
+
     display: flex;
     flex-direction: column;
+
+    color: var(--menu-text-color);
+    background-color: var(--menu-color);
+    border-bottom-left-radius: 15px;
+}
+
+.visible {
+    height: 100%;
+
+    transition: height 300ms ease-in-out;
+}
+
+.invisible {
+    height: 0%;
+
+    transition: height 300ms ease-in-out;
+}
+
+.item {
+    text-align: center;
+    align-self: stretch;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.item:hover {
+    cursor: pointer;
+    color: var(--tab-text-color);
+    background-color: var(--tab-color);
+    
+    transition: color 10ms ease-in-out, background-color 300ms ease-in-out;
 }
